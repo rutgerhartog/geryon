@@ -7,18 +7,16 @@ ARG PASSWORD="user"
 
 
 RUN apk add -U \
+    awesome \
     dbus-x11 \
     sudo \
     xorg-server \
     xorgxrdp \
-    xrdp \
-    xf86-video-fbdev \
-    xfce4 \
-    xeyes
+    xrdp
 
 ENV DISPLAY=:10.0
 
-RUN echo -e "#!/bin/ash\nxfce4-session" > /etc/xrdp/startwm.sh
+RUN echo -e "#!/bin/ash\nawesome" > /etc/xrdp/startwm.sh
 RUN echo "allowed_users = anybody" > /etc/X11/Xwrapper.config 
 
 COPY sesman.ini /etc/xrdp/sesman.ini 
