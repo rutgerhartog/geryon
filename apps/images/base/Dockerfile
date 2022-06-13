@@ -1,5 +1,4 @@
 ARG ALPINE_VERSION="3.15"
-ARG XWING_BASE_SLIM="xwing/base:slim"
 
 FROM alpine:${ALPINE_VERSION} AS gitcloner
 
