@@ -1,0 +1,3 @@
+#!/bin/bash
+xrdp-sesman -n &
+xrdp -n 
