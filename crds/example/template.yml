@@ -1,0 +1,13 @@
+apiVersion: apps.local/v1beta1
+kind: AppTemplate
+metadata:
+  name: firefox 
+spec:
+  image: ghcr.io/rutgerhartog/firefox 
+  sa: false 
+  labels: 
+    app.kubernetes.io/name: firefox 
+    egress-proxy-access: true 
+  env: [] 
+  data:  # relative to the home directory, ie. Downloads corresponds to /home/{user}/Downloads
+  - Downloads

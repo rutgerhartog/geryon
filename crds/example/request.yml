@@ -1,0 +1,7 @@
+apiVersion: apps.local/v1beta1 
+kind: AppRequest
+metadata:
+  name: firefox 
+  namespace: user-testymctestface
+spec: 
+  AppTemplate: firefox 

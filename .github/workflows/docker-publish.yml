@@ -67,3 +67,11 @@ jobs:
           context: apps/images/x-server/
           push: ${{ github.event_name != 'pull_request' }} 
           tags: ghcr.io/rutgerhartog/geryon:x-server
+
+      - name: Build and push operator
+        id: build-operator
+        uses: docker/build-push-action@v3 
+        with:
+          context: operator/
+          push: ${{ github.event_name != 'pull_request' }} 
+          tags: ghcr.io/rutgerhartog/geryon:operator
