@@ -3,8 +3,8 @@ import kubernetes
 from schemas import GraphicalApp
 
 
-@kopf.on.create("xapp")
-def spawn_xapp(spec: dict, name: str, namespace: str, logger, **kwargs):
+@kopf.on.create("apprequest")
+def spawn_app(spec: dict, name: str, namespace: str, logger, **kwargs):
 
     kubernetes.config.load_incluster_config()
     api = kubernetes.client.ApiClient()

@@ -8,4 +8,5 @@ RUN apk add -U \
 
 ENV DISPLAY :1 
 
+# TODO: FD_PROG to start window-manager
 CMD "x11vnc -display ${DISPLAY} -xkb -rfbport 5901 -noshm -noxrecord -noxfixes -noxdamage -forever -nopw"
